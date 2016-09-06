@@ -1,0 +1,17 @@
+# Step one: check assignement of ethnicities are accurate using PCA plots
+
+# Step two: ensure IDs are the same between cov, rnaseq, dosage files 
+
+# Step three: split individuals into cross-validation folds. Ensure these are the same size and balanced for case/control status, etc
+  Output of this should be either ten lists of individuals (one per CV set), or a "foldid" list, which gives the set for each individuals.
+  
+  EG:
+  FID IID CV_Fold  
+  ABCDE_1   ABCDE_1 1
+  ABCDE_1   ABCDE_2 2
+  ABCDE_1   ABCDE_3 4
+  ABCDE_1   ABCDE_4 3
+  ABCDE_1   ABCDE_5 7
+  ABCDE_1   ABCDE_6 10
+  
+  
