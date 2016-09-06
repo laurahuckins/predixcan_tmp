@@ -1,0 +1,14 @@
+# MAF & Info Scores
+
+	--noweb
+	--bfile /sc/orga/projects/CommonMind/data/genotypes/new-run/imputation/final/hardcall/CM-pos-imputed-hardcall95
+	--maf 0.05
+	--extract keep.snps.maf5.info08
+	--make-bed
+	--out /sc/orga/projects/CommonMind/data/genotypes/new-run/imputation/final/hardcall/CM-pos-imputed-hardcall95.maf5.info08
+
+# LD pruning: use code in "snippets"
+
+# RM indels (nb these may be coded as I/D or (eg) A/AAATTTTGGGACACACA; account for both!)
+
+# RM snps with ambiguous allels (AT, GC, etc)
