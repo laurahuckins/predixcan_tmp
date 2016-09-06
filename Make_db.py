@@ -3,9 +3,9 @@
 import sqlite3
 import os
 
-SOURCE_DIR =  'NEW_EU_ONLY/noSVA_ancestry_1mb/'
+SOURCE_DIR =  'Where_resfiles_are/'
 
-conn = sqlite3.connect('NEW_EU_ONLY/noSVA_ancestry_1mb/DLPFC.tmp.db')
+conn = sqlite3.connect('DLPFC.tmp.db')
 
 c = conn.cursor()
 
@@ -46,7 +46,7 @@ def extras_per_file(filename):
 source_files = os.popen("ls NEW_EU_ONLY/noSVA_ancestry_1mb/betas* | grep -v txt ")
 smartlist=source_files.read().split()
 
-#extras_files = os.popen("ls /sc/orga/scratch/huckil01/predictors_CMC_Best/*extra*")
+#extras_files = os.popen("ls /sc/orga/scratch/huckil01/predictors_CMC_Best/*extra*") # Honestly you don't need this step IMO
 #extras_smartlist=extras_files.read().split()
 
 for i in xrange(0, len(smartlist)):
