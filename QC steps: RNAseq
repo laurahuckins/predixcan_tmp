@@ -1,0 +1,25 @@
+### QC steps on RNA-seq data
+
+# Step 1: get genes in chr 1-22
+
+(File lives at:
+/sc/orga/projects/CommonMind/lhuckins/prediXcan_files/gencode.v18.genes.patched_contigs.summary.protein.named.txt
+)
+
+## Step 2: FPKM pruning
+
+function along the lines of (R): this rejects all genes with >10% indivudals with FPKM<0.1
+
+
+qc_fpkm<-function(gene){
+
+if(range(fpkm[gene,])[1]<0.1){
+
+pc<-(100*length(which(fpkm[gene,]<=0.1))/624)
+
+if(pc>=10){
+return(gene)
+}
+}
+}
+
