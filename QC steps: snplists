@@ -1,0 +1,13 @@
+For each gene, get snps in 1Mb regions around the gene (use your final filtered bim file for this). 
+This should result in a list of snps for each gene:
+
+(eg) ENS0000012345_1mb.gz
+rs12345
+rsasdfh
+exm198474
+exm239879
+ks19847
+rs19847
+
+ 
+
